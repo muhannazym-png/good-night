@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Something For You</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         SCREEN 1 — PASSWORD
+    ========================== -->
+
+    <section id="passwordScreen" class="screen active">
+
+        <div class="stars"></div>
+
+        <div class="moon"></div>
+
+        <div class="intro-content">
+
+            <p class="small-text">A little something for you...</p>
+
+            <h1>
+                I prepared something<br>
+                for you tonight...
+            </h1>
+
+            <p class="password-hint">
+                Enter the four-digit password.
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    maxlength="4"
+                    inputmode="numeric"
+                    placeholder="••••"
+                >
+
+                <button onclick="checkPassword()">
+                    OPEN
+                </button>
+
+            </div>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 2 — INTRO
+    ========================== -->
+
+    <section id="introScreen" class="screen">
+
+        <div class="stars"></div>
+
+        <div class="content-box">
+
+            <div class="heart">♡</div>
+
+            <h2>
+                If you're reading this,
+                <br>
+                you actually made it here. ❤️
+            </h2>
+
+            <p>
+                And now, let's remember a little bit
+                about us.
+            </p>
+
+            <button class="main-button" onclick="showQuiz()">
+                NEXT →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 3 — QUIZ
+    ========================== -->
+
+    <section id="quizScreen" class="screen">
+
+        <div class="stars"></div>
+
+        <div class="quiz-container">
+
+            <p class="quiz-number" id="questionNumber">
+                QUESTION 1 / 5
+            </p>
+
+            <h2 id="questionText">
+                How well do you know me?
+            </h2>
+
+            <div id="answers" class="answers"></div>
+
+            <p id="reaction"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 4 — RESULT
+    ========================== -->
+
+    <section id="resultScreen" class="screen">
+
+        <div class="stars"></div>
+
+        <div class="result-container">
+
+            <div class="big-heart">♥</div>
+
+            <h2>
+                You know me pretty well...
+            </h2>
+
+            <p>
+                But there is one answer I will
+                always choose.
+            </p>
+
+            <div class="together-photo-container">
+                <img src="together.jpeg" alt="Together">
+            </div>
+
+            <p class="photo-message">
+                The correct answer:
+                <br>
+                <strong>having you beside me. ❤️</strong>
+            </p>
+
+            <button class="main-button" onclick="showLetter()">
+                ONE MORE THING →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 5 — LETTER
+    ========================== -->
+
+    <section id="letterScreen" class="screen">
+
+        <div class="stars"></div>
+
+        <div class="letter-container">
+
+            <div class="letter-top">
+                ✉
+            </div>
+
+            <h2>
+                A letter for you
+            </h2>
+
+            <div class="letter">
+
+                <p>
+                    Thank you so much for these past few nights and mornings,
+                    and for all the time we spent together.
+                    What I felt is honestly beyond words.
+                    We talked so much over these last few days...
+                </p>
+
+                <p>
+                    Thank you for giving me your time,
+                    and thank you for skipping school just to be with me.
+                </p>
+
+                <p>
+                    Thank you for being so understanding,
+                    for listening to all my stories,
+                    and for making me feel so loved.
+                    Thank you for helping me with the robot, too —
+                    and I absolutely loved the pictures you sent.
+                </p>
+
+                <p>
+                    I wish you a wonderful day.
+                    I really consider you as a god —
+                    you mean the absolute world to me.
+                    I cherish every single text we exchange,
+                    and I want to be with you so badly.
+                </p>
+
+                <p>
+                    I hope you have lots of energy today
+                    for your studies and for hanging out with your brother.
+                </p>
+
+                <p class="letter-ending">
+                    ❤️
+                </p>
+
+            </div>
+
+            <button class="main-button" onclick="startGoodNight()">
+                I READ IT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 6 — GOOD NIGHT
+    ========================== -->
+
+    <section id="goodNightScreen" class="screen">
+
+        <canvas id="starCanvas"></canvas>
+
+        <div id="goodNightText">
+            <span>G</span>
+            <span>O</span>
+            <span>O</span>
+            <span>D</span>
+            <span class="space"></span>
+            <span>N</span>
+            <span>I</span>
+            <span>G</span>
+            <span>H</span>
+            <span>T</span>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
